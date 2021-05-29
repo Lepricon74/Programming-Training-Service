@@ -1,0 +1,47 @@
+﻿@model TrainingService.ViewModels.RegisterViewModel
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Регистрация</title>
+	<link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+	<link href="~/account/site.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div class="form registration-form">
+        <h2>Регистрация</h2>
+        <hr />
+		<form class="register" asp-action="Register" asp-controller="Account" asp-anti-forgery="true">
+			<div class="validation" asp-validation-summary="ModelOnly" />
+			<div class="form-body">
+				<section class="form-section">
+					<label asp-for="Email">Введите логин</label>
+					<input class="input-field" type="text" asp-for="Email" />
+					<span asp-validation-for="Email"></span>
+				</section>
+				<section class="form-section">
+					<label asp-for="Password">Введите пароль</label>
+					<input class="input-field" type="Password" asp-for="Password" />
+					<span asp-validation-for="Password"></span>
+				</section>
+				<section class="form-section">
+					<label asp-for="PasswordConfirm">Повторите пароль</label>
+					<input class="input-field" type="Password" asp-for="PasswordConfirm" />
+					<span asp-validation-for="PasswordConfirm"></span>
+				</section>
+				<section class="form-section">
+					<input class="submit-button" type="submit" value="Регистрация" />
+				</section>
+				<section class="form-section">
+					<div class="auth-form">
+						<a class="btn btn-google"  style="background-image: url('./google.png')" asp-action="GoogleLogin" asp-controller="Account"></a>
+						<a class="btn btn-vk"  style="background-image: url('./vk.png')" asp-action="VkontakteLogin" asp-controller="Account"></a>
+					</div>
+				</section>
+			</div>
+		</form>
+    </div>
+</body>
+</html>

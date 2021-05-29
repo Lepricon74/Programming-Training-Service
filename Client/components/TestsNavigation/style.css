@@ -1,0 +1,97 @@
+.tests-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.tests-list {
+    list-style-type: none;
+}
+
+.test-item {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-width: 700px;
+    max-width: 900px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.test-item:hover{
+    transform: scale(1.2);
+}
+
+.test-item .image {
+    flex: 0 0 auto;
+    width: 30%;
+    height: 150px;
+    margin-right: 30px;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 8px;
+}
+
+.test-ref{
+    text-decoration: none;
+}
+
+.test-inf{
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto 0;
+    text-shadow: 0 0 5px rgb(255 255 255 / 40%);
+}
+
+.test-inf .test-title{
+    margin-top: auto;
+    margin-bottom: 0;
+    font-size: 21px;
+    line-height: 25px;
+    overflow: hidden;
+    max-height: 70px;
+    text-align: center;
+}
+
+.test-inf .test-rating {
+    font-size: 17px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.main-tests-navigation .nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #fff ;
+    box-shadow: 0 0 20px 5px rgb(100 100 255 / 40%);
+    margin-bottom: 10px;
+}
+
+.main-tests-navigation a{
+    text-decoration: none;
+}
+.main-tests-navigation .nav .back-ref{
+    font-size: 20px;
+    background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+    padding-left: 10px;
+    text-shadow: 0 0 5px rgb(255 255 255 / 60%);
+    width: 160px;
+    border-right: 3px solid #fff;
+    box-shadow: 0 0 20px 5px rgb(100 100 255 / 40%);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.main-tests-navigation .nav .back-ref:hover{
+    background: radial-gradient(ellipse at center top, #cce, #33a);
+}

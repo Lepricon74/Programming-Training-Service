@@ -1,0 +1,107 @@
+.main-notes-field{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-notes-field .nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #fff ;
+    box-shadow: 0 0 20px 5px rgb(100 100 255 / 40%);
+}
+
+.main-notes-field .nav .back-ref, .create-ref{
+    font-size: 20px;
+    background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+    padding-left: 10px;
+    text-shadow: 0 0 5px rgb(255 255 255 / 60%);
+    width: 160px;
+    border-right: 3px solid #fff;
+    box-shadow: 0 0 20px 5px rgb(100 100 255 / 40%);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.main-notes-field a{
+    text-decoration: none;
+}
+
+.main-notes-field .nav .back-ref:hover, .create-ref:hover{
+    background: radial-gradient(ellipse at center top, #cce, #33a);
+}
+
+.notes-field {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 100%;
+    margin-bottom: 60px;
+    margin-top: 10px;
+}
+
+.note-form{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    width: 350px;
+    height: 230px;
+    border: 1px solid #fff;
+    background-color: #303050;
+    background-image: radial-gradient(circle at center top, #cce, #33a);
+    box-shadow: 0 0 20px 5px rgba(100, 100, 255, .3);
+    margin: 20px;
+}
+
+.noteAdd-form{
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/src/img/addNote.png), radial-gradient(circle at center top, #cce, #33a);
+    cursor: pointer;
+    width: 350px;
+    height: 230px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 20px 5px rgba(100, 100, 255, .3);
+    background-color: #303050;;
+    margin: 10px;
+}
+
+.noteAdd-form:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 30px 10px rgba(100, 100, 255, .4);
+    background-color: #ccf;
+}
+
+.note-form:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 30px 10px rgba(100, 100, 255, .4);
+}
+
+.note-form .note-title{
+    margin-top: 5px;
+    background-color: whitesmoke;
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    overflow-x: auto;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.note-form .note-text{
+    background-color: whitesmoke;
+    color: black;
+    text-align: center;
+    height: 100%;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    overflow-y: auto;
+    font-size: 15px;
+    border-radius: 10px;
+}
+

@@ -1,0 +1,108 @@
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-menu__inner {
+    display: flex;
+    perspective: 10px;
+    transform: perspective(300px) rotateX(20deg);
+    will-change: perspective;
+    perspective-origin: center center;
+    transition: all 1.3s ease-out;
+    justify-content: center;
+    transform-style: preserve-3d;
+  }
+  .main-menu__inner:hover {
+    perspective: 1000px;
+    transition: all 1.3s ease-in;
+    transform: perspective(10000px) rotateX(0deg);
+  }
+  .main-menu__inner:hover .menu-text {
+      opacity: 1;
+    }
+  .main-menu__inner:hover > .block-menu {
+      opacity: 1;
+      transition-delay: 0s;
+    }
+  .main-menu__inner:hover .explainer {
+      opacity: 0;
+    }
+  
+  .block-menu {
+    display: block;
+    width: 250px;
+    height: 200px;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 20px 5px rgba(100, 100, 255, .4);
+    opacity: 0;
+    transition: all .3ms ease;
+    transition-delay: 1s;
+    position: relative;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #58d;
+    cursor: pointer;
+    background-blend-mode: color-burn;
+    text-decoration: none
+  }
+  
+  .block-menu:hover {
+    box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
+    background-color: #ccf;
+  }
+  
+  .menu-text {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all .3s ease;
+    bottom: 0;
+    left: 5px;
+    position: absolute;
+    will-change: transform;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(100, 100, 255, .6);
+    font-size: 20px;
+  }
+  .lefter {
+    transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+    background-image: url(/src/img/articles.png);
+  }
+  .left {
+    transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+  }
+  .center {
+    opacity: 1;
+    background-image: url(/src/img/learning.png);
+  }
+  .right {
+    transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+  }
+  .righter {
+    transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+    background-image : url(/src/img/author.png);
+  }
+ .explainer {
+    font-weight: 300;
+    font-size: 3rem;
+    color: #fff;
+    transition: all .6s ease;
+    width: 100%;
+    height: 100%;
+    background-color: #303050;
+    background-image: radial-gradient(circle at center top, #cce, #33a);
+    border-radius: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*Выравниваем текст по центру, т.к. спан растянут на всю ширину блока*/
+    text-align: center;
+  }

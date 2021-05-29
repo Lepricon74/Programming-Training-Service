@@ -1,0 +1,25 @@
+.main-error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.error-name{
+    font-size: 50px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+}
+
+.error-inf{
+    font-size: 30px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+}
+
+.error-return{
+    font-size: 20px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}

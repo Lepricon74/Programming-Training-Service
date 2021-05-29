@@ -1,0 +1,15 @@
+﻿@model string
+@{
+	ViewBag.Title = "Создание роли";
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" />
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form asp-action="CreateRole" asp-controller="Admin" method="post">
+	<div class="form-group">
+		<label for="name">Новая роль</label>
+		<input name="name" class="form-control" />
+	</div>
+	<button type="submit" class="btn btn-primary">Добавить</button>
+</form>

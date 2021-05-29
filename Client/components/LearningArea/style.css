@@ -1,0 +1,50 @@
+.learning-content {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+  }
+  .learning-text {
+    width: 85%;
+    position: relative;
+    min-height: 350px;
+    border-radius: 10px;
+    background: whitesmoke;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+  }
+
+ .text {
+    color: black;
+    overflow-x:hidden;
+    font-size: 15px;
+    width: auto;
+  }
+.text img{
+    max-width: 60%;
+  }
+ .button-note {
+    display: block;
+    position: absolute;
+    right: 0;
+    top:0;
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #58d;
+    background-image: url(/src/img/addNote.png);
+    box-shadow: 0 0 20px 5px rgba(100, 100, 255, .4);
+    cursor: pointer;
+    background-blend-mode: color-burn;
+  }
+.button-note:hover{
+    box-shadow: 0 0 30px 10px rgba(100, 100, 255, .6);
+    background-color: #ccf;
+  }
+
+ 

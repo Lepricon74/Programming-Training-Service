@@ -1,0 +1,77 @@
+.authors-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    flex-direction: row;
+}
+
+.author-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.author-name{
+    font-size: 28px;
+    text-align: center;
+    padding: 7px;
+}
+
+.author-univer{
+    font-size: 22px;
+    text-align: center;
+    padding: 5px;
+}
+
+.author-work{
+    font-size: 22px;
+    text-align: center;
+    padding: 5px;
+}
+
+.author-container:hover{
+    transform: scale(1.1);
+}
+
+.author-photo{
+    height: 300px;
+    width: 350px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center center;
+    margin: 10px;
+}
+
+.main-authors-container .nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #fff ;
+    box-shadow: 0 0 20px 5px rgb(100 100 255 / 40%);
+    margin-bottom: 10px;
+}
+
+.main-authors-container a{
+    text-decoration: none;
+}
+.main-authors-container .nav .back-ref{
+    font-size: 20px;
+    background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+    padding-left: 10px;
+    text-shadow: 0 0 5px rgb(255 255 255 / 60%);
+    width: 160px;
+    border-right: 3px solid #fff;
+    box-shadow: 0 0 20px 5px rgb(100 100 255 / 40%);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.main-authors-container .nav .back-ref:hover{
+    background: radial-gradient(ellipse at center top, #cce, #33a);
+}

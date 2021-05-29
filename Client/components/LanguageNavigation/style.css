@@ -1,0 +1,61 @@
+.language-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.language-menu-list{
+    list-style-type: none;
+}
+.language-menu-list__item {
+    padding: 6px 0;
+}
+.language-ref{
+    --fill-color: #58d;
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    font: 1000 3.5rem Raleway, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px var(--fill-color);
+    background: linear-gradient(var(--fill-color) 0 100%) left / 0 no-repeat;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: 0.5s linear;
+}
+
+.language-ref:hover{
+    background-size: 100%;
+}
+
+
+.main-language-menu .nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #fff ;
+    box-shadow: 0 0 20px 5px rgb(100 100 255 / 40%);
+    margin-bottom: 10px;
+}
+
+.main-language-menu a{
+    text-decoration: none;
+}
+.main-language-menu .nav .back-ref{
+    font-size: 20px;
+    background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+    padding-left: 10px;
+    text-shadow: 0 0 5px rgb(255 255 255 / 60%);
+    width: 160px;
+    border-right: 3px solid #fff;
+    box-shadow: 0 0 20px 5px rgb(100 100 255 / 40%);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.main-language-menu .nav .back-ref:hover{
+    background: radial-gradient(ellipse at center top, #cce, #33a);
+}

@@ -1,0 +1,50 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<div class="articleText" id="articleText">
+		<h2>Компиляция в командной строке с .NET Core CLI</h2><div class="date">Последнее обновление: 11.11.2020</div>
+		<div style="margin-top:23px;margin-left:6px;">
+			<div></div>
+		</div>
+
+		<p>
+			Как правило, для создания программ на C# разработчики используют Visual Studio или какие-то другие IDE типа Rider от компании JetBrains.
+			Но все подобные IDE, хотя и облегчают разработку, в то же время скрывают множество мельчайших подробностей по созданию программ. И в реальности
+			мы даже можем обойтись без той же Visual Studio, используя только инфраструктуру .NET Core CLI. Рассмотрим, как использовать .NET Core CLI и компилировать приложение из командной строки.
+		</p>
+		<p>Поэтому создадим на диске C какую-нибудь новую папку для проекта. Назовем ее, к примеру, <span class="b">helloapp</span>. Откроем командную строку и с помощью команды cd перейдем к этой папке.</p>
+		<p>
+			Для создания проекта в .NET Core CLI применяется команда <span class="b">dotnet new</span>, которой передается название проекта. Итак, в введем в командной строке
+			следующую команду:
+		</p>
+		<div class="console"><pre class="consoletext">dotnet new console</pre></div>
+		<p>В данном случае мы указываем, что создаваемый проект будет представлять консольное приложение.</p>
+		<img src="/Files/PicturesStorage/137491363.jpg" alt="Создание проекта C# 9 и .NET 5 в консоли">
+		<p>После выполнения этой команды в папке helloapp будет создан проект с минимальным набором стандартных файлов и папок.</p>
+		<img src="/Files/PicturesStorage/1477410221.jpg" alt=".NET Core CLI Создание проекта">
+		<p>
+			В частности, мы можем найти в папке проекта файл <span class="b">helloapp.csproj</span>. Это главный файл проекта, который определяет его
+			конфигурацию. Мы можем открыть его в любом текстовом редакторе, просмотретьи  при необходимости изменить. По умолчанию он имеет следующее определение:
+		</p>
+		<div><div id="highlighter_670387" class="syntaxhighlighter  xml"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="xml plain">&lt;</code><code class="xml keyword">Project</code> <code class="xml color1">Sdk</code><code class="xml plain">=</code><code class="xml string">"Microsoft.NET.Sdk"</code><code class="xml plain">&gt;</code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="xml spaces">&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">PropertyGroup</code><code class="xml plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">OutputType</code><code class="xml plain">&gt;Exe&lt;/</code><code class="xml keyword">OutputType</code><code class="xml plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="xml spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="xml plain">&lt;</code><code class="xml keyword">TargetFramework</code><code class="xml plain">&gt;net5.0&lt;/</code><code class="xml keyword">TargetFramework</code><code class="xml plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="xml spaces">&nbsp;&nbsp;</code><code class="xml plain">&lt;/</code><code class="xml keyword">PropertyGroup</code><code class="xml plain">&gt;</code></div><div class="line number7 index6 alt2">&nbsp;</div><div class="line number8 index7 alt1"><code class="xml plain">&lt;/</code><code class="xml keyword">Project</code><code class="xml plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
+		<p>
+			Фактически это xml-файл, который содержит ряд элементов. Так, в данном случае элемент <code>OutputType</code> имеет значение "Exe", то есть при компиляции
+			будет создаваться exe-файл, который мы сможем запускать. А элемент <code>TargetFramework</code> указывает, под какую версию фреймворка будет компилироваться
+			проект. В данном случае это .net 5.0.
+		</p>
+		<p>И, кроме того, по умолчанию создается главный файл программы <span class="b">Program.cs</span> со следующим содержимым:</p>
+		<div><div id="highlighter_424761" class="syntaxhighlighter  c#"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="c# keyword">using</code> <code class="c# plain">System;</code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="c# keyword">namespace</code> <code class="c# plain">helloapp</code></div><div class="line number4 index3 alt1"><code class="c# plain">{</code></div><div class="line number5 index4 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">class</code> <code class="c# plain">Program</code></div><div class="line number6 index5 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">{</code></div><div class="line number7 index6 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">static</code> <code class="c# keyword">void</code> <code class="c# plain">Main(</code><code class="c# keyword">string</code><code class="c# plain">[] args)</code></div><div class="line number8 index7 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">{</code></div><div class="line number9 index8 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">Console.WriteLine(</code><code class="c# string">"Hello World!"</code><code class="c# plain">);</code></div><div class="line number10 index9 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">}</code></div><div class="line number11 index10 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">}</code></div><div class="line number12 index11 alt1"><code class="c# plain">}</code></div></div></td></tr></tbody></table></div></div>
+		<p>Соответственно, если нам надо внести изменения в исходный код программы, то мы будем изменять содержимое именно этого файла.</p>
+		<p>В принципе этот минимальный проект уже можно запускать. Для запуска проекта введем в командной строке следующую команду:</p>
+		<div class="console"><pre class="consoletext">dotnet run</pre></div>
+		<img src="/Files/PicturesStorage/988003437.jpg" alt="Компиляция программы на C# из командной строки">
+		<p>
+			После выполнения команды в проекте в папке bin\MCD\Debug\net5.0 появится файл программы helloapp.exe, который можно вручную запустить. (Если используются .NET Core 2.x или 1.х, то там
+			буде компилировать файл с расширением dll.)
+		</p>
+		<div style="margin-top:25px;clear:both;">
+		</div>
+</body>
+</html>

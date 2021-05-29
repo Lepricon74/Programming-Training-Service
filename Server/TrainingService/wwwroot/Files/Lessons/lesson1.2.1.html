@@ -1,0 +1,72 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<div class="articleText" id="articleText">
+		<h2>Структура программы</h2><div class="date">Последнее обновление: 11.11.2020</div>
+		<h3>Инструкции</h3>
+		<p>
+			Базовым строительным блоком программы являются <span class="b">инструкции</span> (statement). Инструкция представляет некоторое
+			действие, например, арифметическую операцию, вызов метода, объявление переменной и присвоение ей значения. В конце каждой инструкции
+			в C# ставится точка с запятой (;). Данный знак указывает компилятору на конец инструкции. Например:
+		</p>
+		<div><div id="highlighter_247347" class="syntaxhighlighter  c#"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="c# plain">Console.WriteLine(</code><code class="c# string">"Привет"</code><code class="c# plain">);</code></div></div></td></tr></tbody></table></div></div>
+		<p>
+			Данная строка представляет вызов метода <code>Console.WriteLine</code>, который выводит на консоль строку. В данном случае вызов метода является
+			инструкцией и поэтому завершается точкой с запятой.
+		</p>
+		<p>
+			Набор инструкций может объединяться в блок кода. Блок кода заключается в фигурные скобки, а инструкции помещаются между открывающей и
+			закрывающей фигурными скобками:
+		</p>
+		<div><div id="highlighter_47454" class="syntaxhighlighter  c#"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="c# plain">{</code></div><div class="line number2 index1 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">Console.WriteLine(</code><code class="c# string">"Привет"</code><code class="c# plain">);</code></div><div class="line number3 index2 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">Console.WriteLine(</code><code class="c# string">"Добро пожаловать в C#"</code><code class="c# plain">);</code></div><div class="line number4 index3 alt1"><code class="c# plain">}</code></div></div></td></tr></tbody></table></div></div>
+		<p>В данном блоке кода две инструкции, которые выводят на консоль определенную строку.</p>
+		<p>Одни блоки кода могут содержать другие блоки:</p>
+		<div><div id="highlighter_667164" class="syntaxhighlighter  c#"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="c# plain">{</code></div><div class="line number2 index1 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">Console.WriteLine(</code><code class="c# string">"Первый блок"</code><code class="c# plain">);</code></div><div class="line number3 index2 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">{</code></div><div class="line number4 index3 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">Console.WriteLine(</code><code class="c# string">"Второй блок"</code><code class="c# plain">);</code></div><div class="line number5 index4 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">}</code></div><div class="line number6 index5 alt1"><code class="c# plain">}</code></div></div></td></tr></tbody></table></div></div>
+		<h3>Метод Main</h3>
+		<p>
+			Точкой входа в программу на языке C# является метод Main. При создании проекта консольного приложения в Visual Studio, например, создается следующий
+			метод Main:
+		</p>
+		<div><div id="highlighter_140946" class="syntaxhighlighter  c#"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="c# keyword">class</code> <code class="c# plain">Program</code></div><div class="line number2 index1 alt1"><code class="c# plain">{</code></div><div class="line number3 index2 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">static</code> <code class="c# keyword">void</code> <code class="c# plain">Main(</code><code class="c# keyword">string</code><code class="c# plain">[] args)</code></div><div class="line number4 index3 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">{</code></div><div class="line number5 index4 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# comments">// здесь помещаются выполняемые инструкции</code></div><div class="line number6 index5 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">}</code></div><div class="line number7 index6 alt2"><code class="c# plain">}</code></div></div></td></tr></tbody></table></div></div>
+		<p>
+			По умолчанию метод Main размещается в классе Program. Название класса может быть любым. Но метод Main является обязательной частью консольного приложения.
+			Если мы изменим его название, то программа не скомпилируется.
+		</p>
+		<p>
+			По сути и класс, и метод представляют своего рода блок кода: блок метода помещается в блок класса. Внутри блока метода Main располагаются выполняемые
+			в программе инструкции.
+		</p>
+		<h3>Регистрозависимость</h3>
+		<p>
+			C# является регистрозависимым языком. Это значит, в зависимости от регистра символов какое-то определенные названия может представлять разные классы, методы,
+			переменные и т.д. Например, название обязательного метода Main начинается именно с большой буквы: "Main". Если мы назовем метод "main", то программа
+			не скомпилируется, так как метод, который представляет стартовую точку в приложении, обязательно должен называться "Main", а не "main" или "MAIN".
+		</p>
+		<h3>Комментарии</h3>
+		<p>
+			Важной частью программного кода являются комментарии. Они не являются собственно частью программы, при компиляции они игнорируются.
+			Тем не менее комментарии делают код программы более понятным, помогая понять те или иные его части.
+		</p>
+		<p>
+			есть два типа комментариев: однострочный и многострочный. Однострочный комментарий размещается на одной строке после двойного слеша
+			//. А многострочный комментарий заключается между символами /* текст комментария */. Он может размещаться на нескольких строках.
+			Например:
+		</p>
+		<div><div id="highlighter_969760" class="syntaxhighlighter  c#"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="c# keyword">using</code> <code class="c# plain">System;</code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="c# keyword">namespace</code> <code class="c# plain">HelloApp</code></div><div class="line number4 index3 alt1"><code class="c# plain">{</code></div><div class="line number5 index4 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# comments">/*</code></div><div class="line number6 index5 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# comments">программа, которая спрашивает у пользователя имя</code></div><div class="line number7 index6 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# comments">и выводит его на консоль</code></div><div class="line number8 index7 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# comments">*/</code></div><div class="line number9 index8 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">class</code> <code class="c# plain">Program</code></div><div class="line number10 index9 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">{</code></div><div class="line number11 index10 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# comments">// метод Main - стартовая точка приложения</code></div><div class="line number12 index11 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">static</code> <code class="c# keyword">void</code> <code class="c# plain">Main(</code><code class="c# keyword">string</code><code class="c# plain">[] args)</code></div><div class="line number13 index12 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">{</code></div><div class="line number14 index13 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">Console.Write(</code><code class="c# string">"Введите свое имя: "</code><code class="c# plain">);</code></div><div class="line number15 index14 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# keyword">string</code> <code class="c# plain">name = Console.ReadLine();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="c# comments">// вводим имя</code></div><div class="line number16 index15 alt1"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">}</code></div><div class="line number17 index16 alt2"><code class="c# spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c# plain">}</code></div><div class="line number18 index17 alt1"><code class="c# plain">}</code></div></div></td></tr></tbody></table></div></div>
+		<h3>Программы верхнего уровня</h3>
+		<p>
+			Начиная с версии C# 9.0 (.NET 5) добавлена возможность создавать программы верхнего уровня. То есть, если у нас программа состоит
+			из одного метода Main, то мы можем убрать из определения программы объявление пространства имен (<code>namespace HelloApp</code>),
+			объявление класса (<code>class Program</code>) и объявление метода Main (<code>static void Main(string[] args)</code>) и
+			оставить только директивы <code>using</code> с подключаемыми пространствами имен и собственно исполняемые инструкции.
+		</p>
+		<p>
+			Например, выше в предыдущем листинге кода программа запрашивала ввод имени пользователя. Фактически все тело программы состоит из метода Main,
+			поэтому мы ее можем сократить в C# 9.0 следующим образом:
+		</p>
+		<div><div id="highlighter_888197" class="syntaxhighlighter  c#"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="c# keyword">using</code> <code class="c# plain">System;</code></div><div class="line number2 index1 alt1">&nbsp;</div><div class="line number3 index2 alt2"><code class="c# plain">Console.Write(</code><code class="c# string">"Введите свое имя: "</code><code class="c# plain">);</code></div><div class="line number4 index3 alt1"><code class="c# keyword">string</code> <code class="c# plain">name = Console.ReadLine();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="c# comments">// вводим имя</code></div><div class="line number5 index4 alt2"><code class="c# plain">Console.WriteLine($</code><code class="c# string">"Привет {name}"</code><code class="c# plain">);&nbsp;&nbsp;&nbsp; </code><code class="c# comments">// выводим имя на консоль</code></div></div></td></tr></tbody></table></div></div>
+		<p>Результат работы программы будет тот же, что и в предыдущем случае.</p>
+</body>
+</html>

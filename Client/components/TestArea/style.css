@@ -1,0 +1,195 @@
+.test-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.test-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.test-menu .test{
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-width: 700px;
+    max-width: 800px;
+    margin-bottom: 30px;
+    border: 3px solid #fff;
+    box-shadow: 0 0 20px 5px rgb(100 100 255 / 40%);
+    padding: 10px;
+}
+
+.test-menu .test-data {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto 0;
+    text-shadow: 0 0 5px rgb(255 255 255 / 40%);
+}
+
+.test-menu .test-answer{
+    font-size: 18px;
+    text-align: center;
+}
+
+.test-menu .test-options{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    grid-gap: 10px;
+}
+
+.test-menu .test-question{
+    margin-top: auto;
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 25px;
+    overflow: hidden;
+    max-height: 70px;
+    text-align: center;
+}
+
+.test-menu .test-input input{
+    width: 50%;
+    height: 35px;
+    color: black;
+}
+
+.main-test-area .end-button {
+  background-image: radial-gradient(ellipse at center top, #cce, #33a);
+  box-shadow: 0 0 20px 5px rgba(100, 100, 255, .3);
+  padding: 10px;
+  max-width: 25%;
+  text-align: center;
+  align-self: center;
+  cursor: pointer;
+}
+
+.main-test-area .end-button:hover{
+    box-shadow: 0 0 20px 5px rgba(100, 100, 255, .7);
+}
+
+.main-test-area .nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #fff ;
+    box-shadow: 0 0 20px 5px rgb(100 100 255 / 40%);
+    margin-bottom: 10px;
+}
+
+.main-test-area a{
+    text-decoration: none;
+}
+.main-test-area .nav .back-ref{
+    font-size: 20px;
+    background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+    padding-left: 10px;
+    text-shadow: 0 0 5px rgb(255 255 255 / 60%);
+    width: 160px;
+    border-right: 3px solid #fff;
+    box-shadow: 0 0 20px 5px rgb(100 100 255 / 40%);
+    padding: 5px;
+    cursor: pointer;
+}
+
+.main-test-area .nav .back-ref:hover{
+    background: radial-gradient(ellipse at center top, #cce, #33a);
+}
+
+.main-test-area .result{
+    display: block;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.main-test-area .modal {
+    opacity: 0; 
+    background: rgba(0,0,0,0.7); 
+    pointer-events: none; 
+    position: fixed; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all 0.5s ease;
+    margin: 0;
+    padding: 0;
+  }
+
+.main-test-area  .modal:target {
+    opacity: 1;
+    pointer-events: auto; 
+    overflow-y: auto; 
+    }
+
+.main-test-area .modal-wrapper {
+    margin:auto; 
+    margin-top: 40vh; 
+    }
+
+.main-test-area .modal-inner {
+    position: relative;
+    background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+    border: 1px solid #ccc; 
+    border-radius: 0px; 
+    display: flex;
+    flex-direction: column;
+    }
+
+.main-test-area .modal .modal-content{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-test-area .modal .modal-content .resultTest{
+    position: relative;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 5px rgb(255 255 255 / 40%);
+    margin: 10px;
+    font-size: 20px;
+  }
+
+  .main-test-area .modal .modal-content .buttons{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+  }
+
+  .main-test-area .modal .modal-content .close-test, .stay{
+    font-size: 15px;
+    display: block;
+    background-image: radial-gradient(ellipse at center top, #cce, #33a);
+    box-shadow: 0 0 20px 5px rgba(100, 100, 255, .3);
+    margin: 10px;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .main-test-area .modal .modal-content .close-test:hover, .stay:hover{
+    box-shadow: 0 0 20px 5px rgba(100, 100, 255, .7);
+  }

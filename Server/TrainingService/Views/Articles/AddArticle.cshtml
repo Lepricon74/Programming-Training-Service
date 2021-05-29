@@ -1,0 +1,28 @@
+﻿@model TrainingService.Models.Article
+@{
+	ViewData["Title"] = "Добавление статьи";
+}
+
+<h3>Введите информацию о статье и добавьте файлы</h3>
+<form asp-action="AddArticle" asp-controller="Articles" method="post" enctype="multipart/form-data">
+	<p>
+		<b>Название статьи:</b><br>
+		<input type="text" name="title">
+	</p>
+	<p>
+		<b>Описание:</b><br>
+		<input type="text" name="description">
+	</p>
+	<p>
+		<b>Загрузите превью статьи:</b><br>
+		<input type="file" name="uploadedArticlePicture" /><br>
+	</p>
+	<p>
+		<b>Загрузите HTML файл с уроком:</b><br>
+		<input type="file" name="uploadedNewArticleHTML" /><br>
+	</p>
+	<p>
+		<input type="submit" value="Загрузить" />
+	</p>
+</form>
+

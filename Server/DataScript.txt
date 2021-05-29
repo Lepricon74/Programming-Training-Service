@@ -1,0 +1,116 @@
+insert into Topics values ('Sharp'),('SQL'),('JS')
+
+insert into Sections values (1,1,'Введение в C#'),(2,1,'Основы программирования на C#'),(3,1,'ООП')
+
+
+
+
+
+insert into Tests values ('Test 1','/Files/PicturesStorage/238999233.jpg'),
+('Test 2','/Files/PicturesStorage/238999233.jpg'),
+('Test 3','/Files/PicturesStorage/238999233.jpg'),
+('Test 4','/Files/PicturesStorage/238999233.jpg')
+
+insert into UsersTests values ('7f14453c-cfcd-48ce-bc89-93da77daa5df',1,0)
+
+insert into Questions values (1,1,1,'1 вариант&&&2 вариант&&&3 вариант&&&4 вариант','2 вариант','1 Вопрос 1 Теста')
+insert into Questions values (2,1,1,'1 вариант&&&2 вариант&&&3 вариант&&&4 вариант','3 вариант','2 Вопрос 1 Теста')
+insert into Questions values (3,1,0,'','correct','3 Вопрос 1 Теста')
+insert into Questions values (4,1,1,'1 вариант&&&2 вариант&&&3 вариант&&&4 вариант','4 вариант','4 Вопрос 1 Теста')
+
+Тесты JS:
+
+UPDATE Tests SET Title = 'Переменные и типы данных' WHERE id = 5;
+//insert into Tests values ('Переменные и типы данных','/Files/PicturesStorage/3660725380.jpg',2),
+insert into Questions values (1,5,1,'let arr = []&&&ler arr = {}&&&const arr = []&&&let arr = new Array()','ler arr = {}','Укажите неверный вариант объявления массива:')
+insert into Questions values (2,5,0,'','push','Напишите название метода, используемого для добавления элемента в конце массива:')
+insert into Questions values (3,5,0,'','length','Напишите название свойства, используемого для получения размера массива:')
+insert into Questions values (4,5,1,'sort&&&splice&&&shift&&&map','map','Выберите метод, который вызывает функцию для каждого элемента массива и возвращает массив результатов выполнения этой функции:')
+insert into Questions values (5,5,0,'','reduce','Напишите название метода, который вычисляет одно значение на основе всего массива:')
+insert into Questions values (6,5,0,'','split','Напишите название метода, который преобразует строку в массив:')
+
+UPDATE Tests SET Title = 'Циклы и условные ветвления' WHERE id = 6;
+
+insert into Questions values (1,6,0,'','const','Какое ключевое слово используется для объявления константной переменной?')
+insert into Questions values (2,6,1,'let a;&&&bool a;&&&int a;&&&char a;','let a;','Выберите верное объявление переменной в JavaScript:')
+insert into Questions values (3,6,0,'','8','Сколько основных типов данных есть в JavaScript?')
+insert into Questions values (4,6,0,'','typeof','Напишите название оператора, который возвращает тип аргумента:')
+
+UPDATE Tests SET Title = 'Циклы и условные ветвления' WHERE id = 7;
+
+insert into Questions values (1,7,0,'','if','Напишите название инструкции, которую нужно использовать при выполнении действий в зависимости от условий:')
+insert into Questions values (2,7,1,'while&&&do…while&&&while…do&&&for','while…do','Какого вида циклов не существует?')
+insert into Questions values (3,7,0,'','тернарный','Как называется условный оператор «?»')
+insert into Questions values (4,7,0,'','break','Напишите название директивы, завершающей выполнение цикла:')
+insert into Questions values (5,7,1,'1&&&от 1 до 3&&&от 1 до 4&&&2 и 3','от 1 до 3','Какие значения будут в консоли после выполнения цикла for (let i=1; i <4; i++) { console.log (i)} ?')
+insert into Questions values (6,7,0,'','continue','Какая директива обеспечивает переход к следующей итерации?')
+insert into Questions values (7,7,1,'всегда&&&когда условие истинно&&&когда условие ложно&&&никогда','когда условие ложно','Когда выполняется блок else ?')
+
+
+UPDATE Tests SET Title = 'Функции ' WHERE id = 8;
+
+insert into Questions values (1,8,0,'','return','Напишите директиву, используемую для возврата значения функции:')
+insert into Questions values (2,8,0,'','Да','Может ли функция не содержать параметров? Дайте ответ в виде Да/Нет:')
+insert into Questions values (3,8,1,'undefined&&&0&&&null&&&NaN','undefined','Какой результат будет у функции, если в ней отсутствует return?')
+insert into Questions values (4,8,0,'','Да','Имеет ли функция доступ к внешним переменным? Дайте ответ в виде Да/Нет:')
+
+Тесты SQL:
+
+UPDATE Tests SET Title = 'Манипуляция данными' WHERE id = 10;
+
+insert into Questions values (1,9,1,'select from tabs&&&select * from tabs&&&select # from tabs&&&select & from tabs','select * from tabs','Как вывести все значения таблицы tabs?')
+insert into Questions values (2,9,1,'FULL OUTER JOIN&&&LEFT JOIN&&&RIGHT JOIN&&&INNER JOIN','INNER JOIN','Какой оператор используется для внутреннего соединения двух таблицы?')
+insert into Questions values (3,9,0,'','Where','Напишите название оператора, используемого для ограничения строк по условию:')
+insert into Questions values (4,9,1,'DESC&&&DECS&&&ASC&&&DASC','DESC','Какой параметр оператора Order By используется для сортировки по убыванию?')
+insert into Questions values (5,9,0,'','Having','Напишите название оператора, используемого для фильтрации строк по значениям агрегатных функций:')
+
+UPDATE Tests SET Title = 'Манипуляция данными' WHERE id = 10;
+
+insert into Questions values (1,10,0,'','Insert','Напишите название оператора, используемого для добавления данных в таблицу:')
+insert into Questions values (2,10,1,'VALUES&&&OPTIONS&&&VALUE&&&ALL','VALUES','Какое ключевое слово используется для вставки множества значений в таблицу?')
+insert into Questions values (3,10,0,'','Delete','Напишите название оператора, используемого для удаления данных из таблицы:')
+insert into Questions values (4,10,0,'','Update','Напишите название оператора, используемого для обновления данных в таблице:')
+
+UPDATE Tests SET Title = 'Таблицы и базы данных' WHERE id = 11;
+
+insert into Questions values (1,11,1,'MAKE DATABASE&&&CREATE&&&CREATE DATABASE&&&OPEN DATABASE','CREATE DATABASE','Выберите название оператора, используемого для создания базы данных:')
+insert into Questions values (2,11,1,'Primary&&&Внешние&&&Первичные&&&Вторичные','Вторичные','Каких ключей нет в SQL?')
+insert into Questions values (3,11,0,'','Create table','Напишите название оператора, используемого для создания таблицы:')
+insert into Questions values (4,11,1,'DELETE DATABASE&&&DROP DATABASE&&&DELETE DB&&&DROP','DROP DATABASE','С помощью какого оператора осуществляется удаление базы данных?')
+
+Тесты C#:
+
+UPDATE Tests SET Title = 'Переменные и типы данных' WHERE Id = 1;
+
+insert into Questions values (1,1,1,'char&&&int&&&string&&&float','string','Какой тип данных используется для хранения набора символов Unicode?')
+insert into Questions values (2,1,1,'int&&&sbyte&&&double&&&byte','byte','Какой тип данных хранит целое число от 0 до 255 и занимает 1 байт?')
+insert into Questions values (3,1,0,'','bool','Напишите название типа, который хранит значение true или false:')
+insert into Questions values (4,1,1,'тип имя_переменной&&&имя_переменной тип&&&тип=имя_переменной&&&имя_переменной','тип имя_переменной','Как выглядит синтаксис определения переменной?')
+insert into Questions values (5,1,0,'','var','Какое ключевое слово используется для неявной типизации?')
+
+UPDATE Tests SET Title = 'Циклы и условные выражения' WHERE Id = 2;
+
+insert into Questions values (1,2,1,' & &&& && &&& || &&& ! ',' || ','Выберите операцию логического сложения:')
+insert into Questions values (2,2,0,'','else','Напишите название блока, в котором выполняются заданные действия, если в блоке if не выполнилось условие:')
+insert into Questions values (3,2,0,'','case','Напишите название оператора, после которого помещается значение для сравнения с выражением в конструкции Switch:')
+insert into Questions values (4,2,0,'','break','С помощью какого оператора можно выйти из цикла до его завершения?')
+insert into Questions values (5,2,1,' = &&& == &&& != &&& && ',' == ','Выберите операцию, которая сравнивает два операнда на равенство:')
+insert into Questions values (6,2,1,'for&&&while&&&foreach&&&for do','for do','Каких циклов не существует в C# ?')
+
+UPDATE Tests SET Title = 'Массивы и методы' WHERE Id = 3;
+
+insert into Questions values (1,3,1,'int arr&&&int[] arr&&&int{} arr&&&int arr{}','int[] arr','Выберите корректное объявление массива:')
+insert into Questions values (2,3,0,'','foreach','Напишите название цикла, предназначенного для перебора элементов в массивах:')
+insert into Questions values (3,3,0,'','Нет','int[] arr = new int [4, 3]. Является ли такое объявление двумерного массива верным ? Ответ дайте в виде Да/Нет:')
+insert into Questions values (4,3,1,'static void func(int a)&&&static int func()&&&static void(int a)&&&static void func ()','static void(int a)','Какая структура определения метода не верна ?')
+insert into Questions values (5,3,0,'','return','Напишите тип методов, не возвращающих значение:')
+insert into Questions values (6,3,0,'','void','Напишите название оператора, которые производит выход из метода:')
+
+UPDATE Tests SET Title = 'Классы и объекты' WHERE Id = 4;
+
+insert into Questions values (1,4,0,'','class','Напишите название ключевого слова, с помощью которого определяется класс:')
+insert into Questions values (2,4,1,'object&&&struct&&&stract&&&str','struct','Какое ключевое слово используется для определения структуры?')
+insert into Questions values (3,4,0,'','this','Напишите название ключевого слова, предоставляющего ссылку на текущий экземпляр класса:')
+insert into Questions values (4,4,1,'конструктор&&&стартер&&&шаблон&&&объект','конструктор','Как называется метод, который вызывается при создании нового объекта данного класса?')
+insert into Questions values (5,4,0,'','private','Напишите название модификатора доступа, делающего закрытыми поля или методы:')
+insert into Questions values (6,4,0,'','static','Какое ключевое слово делает поля, методы и свойства статическими?')

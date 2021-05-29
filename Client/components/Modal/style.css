@@ -1,0 +1,111 @@
+.modal {
+    opacity: 0; 
+    background: rgba(0,0,0,0.7); 
+    pointer-events: none; 
+    position: fixed; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all 0.5s ease;
+    margin: 0;
+    padding: 0;
+  }
+
+  .modal:target {
+    opacity: 1;
+    pointer-events: auto; 
+    overflow-y: auto; 
+    }
+
+.modal-wrapper {
+    margin:auto; 
+    margin-top:25vh; 
+    }
+
+.modal-inner {
+    position: relative;
+    background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+    border: 1px solid #ccc; 
+    border-radius: 0px; 
+    display: flex;
+    flex-direction: column;
+    }
+
+.modal .note-header{
+  display: flex;
+  padding: 15px;
+  position: relative;
+  font-size: 20px;
+  justify-content: center;
+  text-shadow:  0 0 10px rgba(255, 255, 255, .5);
+}
+
+.modal .modal-content{
+  display: flex;
+  color:black;
+  justify-content: center;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-content .note-title {
+  font-size: 15px;
+  color:black;
+  width: 65%;
+  padding: 15px;
+  margin: 0 10px 10px 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, .2);
+}
+
+.modal-content .note-text{
+  font-size: 15px;
+  color:black;
+  width: 80%;
+  height: 100px;
+  padding: 15px;
+  margin: 10px;
+  resize: none;
+  box-shadow: 0 0 10px rgba(255, 255, 255, .2);
+}
+
+.modal-content .close-note{
+  display: block;
+  border: none;
+  position: absolute;
+  right: 0;
+  top:0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px
+}
+
+.modal-content .close-note:hover{
+  color: red;
+}
+
+.modal .save-note{
+  font-size: 15px;
+  display: block;
+  background-image: radial-gradient(ellipse at center top, #cce, #33a);
+  box-shadow: 0 0 20px 5px rgba(100, 100, 255, .3);
+  margin: 10px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.save-note:hover{
+  box-shadow: 0 0 20px 5px rgba(100, 100, 255, .7);
+}
+
+
+@media (min-width: 550px) {
+  .modal-wrapper {
+    max-width: 500px;
+      }
+    }

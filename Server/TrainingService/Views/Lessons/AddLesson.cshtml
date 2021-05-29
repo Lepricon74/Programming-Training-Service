@@ -1,0 +1,49 @@
+﻿@{
+	ViewData["Title"] = "Добавление урока";
+}
+@*<script>
+		function addInput() {
+			var str = '<p><input type="file" name="uploadedLessonPictures" /></p>';
+			document.getElementById('inputPictures').innerHTML = document.getElementById('inputPictures').innerHTML + str;
+		}
+	</script>*@
+
+
+<h3>Выберите файл для загрузки</h3>
+<form asp-action="AddLesson" asp-controller="Lessons" method="post" enctype="multipart/form-data">
+	<p>
+		<b>Название урока:</b><br>
+		<input type="text" name="newLessonName" size="40">
+	</p>
+	<p>
+		<b>Id Предмета:</b><br>
+		<input type="text" name="topicId" size="40">
+	</p>
+	<p>
+		<b>Id Секции:</b><br>
+		<input type="text" name="sectionId" size="40">
+	</p>
+	<p>
+		<b>Загрузите HTML файл с уроком:</b><br>
+		<input type="file" name="uploadedNewLessonHTML" /><br>
+	</p>
+	<p>
+		<input type="submit" value="Загрузить" />
+	</p>
+</form>
+
+@*<script type="text/javascript">
+		var model = await(await fetch('/lessons/topics')).json();
+		var topicSelect = addLessonForm.topicSelect;
+		var topics =
+		topicSelect.options=
+		function changeOption() {
+			var sectionSelect = document.getElementById("sectionSelect");
+			var selectedOption = topicSelect.options[topicSelect.selectedIndex];
+
+			sectionSelect.options = model[selectedOption];
+		}
+
+		languagesSelect.addEventListener("change", topicSelect);
+	</script>*@
+
